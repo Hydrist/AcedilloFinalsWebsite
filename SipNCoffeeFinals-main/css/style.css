@@ -1,0 +1,298 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #54321e;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-navigation a, a {
+    font-family: "Roboto Slab", serif;
+    font-size: larger;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #c6a286;
+    display: block;
+    transition: all 0.1s ease-in;  
+} .sidebar-navigation a:hover, a:hover {
+    scale: 95%;
+    filter: brightness(80%);
+    transition: all 0.1s ease-in;  
+} .sidebar-navigation a:active, a:active {
+    scale: 90%;
+    transition: all 0.1s ease-in;  
+}
+
+.wrapper {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-inline: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4c2f1e;
+}
+
+.header .logo img {
+    width: 120px;
+    height: auto;
+}
+
+.navigation a {
+    font-family: "Roboto Slab", serif;
+    font-size: larger;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #c6a286;
+    transition: all 0.1s ease-in;  
+} .navigation a:hover {
+    scale: 95%;
+    filter: brightness(80%);
+    transition: all 0.1s ease-in;  
+} .navigation a:active {
+    scale: 90%;
+    transition: all 0.1s ease-in;  
+}
+
+button {
+    border: groove;
+    background-color:#c6a286;
+    color: #4c2f1e;
+    padding: 20px 30px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.1s ease-in;  
+    border-color: #4c2f1e;
+    border-width: 2px;
+}
+
+button:hover {
+    scale: 95%;
+    filter: brightness(80%);
+}
+
+button:active {
+    scale: 93%;
+}
+
+.banner {
+    text-align: center; 
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    background: url('/homeimages/banner.png') no-repeat center;
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: larger;
+}
+
+.banner {
+    text-align: center; 
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    background: url('https://hydrist.github.io/SipNCoffeeFinals/homeimages/banner.png') no-repeat center;
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: larger;
+}
+
+.header-banner {
+    text-align: center; 
+    font-family: 'Times New Roman', Times, serif;
+    padding: 50px;
+    background: url('https://hydrist.github.io/SipNCoffeeFinals/homeimages/banner.png') no-repeat center;
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: larger;
+}
+
+.header-banner p {
+    border: 2px dashed white;
+    padding: 10px;
+  }
+
+
+.main-content {
+    padding: 20px;
+    background-color: #f1e8df;
+    flex-grow: 1;
+}
+
+.images-collage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.image-box {
+    width: 325px;
+    margin: 20px;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-box:nth-child(4), .image-box:nth-child(5) .image-box:nth-child(6) {
+    width: 325px;
+    margin: 20px;
+    justify-content: space-between center;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.intro-text-area {
+    font-size: 1.2em;
+    text-align: justify;
+    padding-inline: 80px;
+    padding-top: 20px;
+    background-color: white;
+    flex-grow: 2;
+    flex-shrink: 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 5px;
+    color: white;
+    background-color: #4c2f1e;
+}
+
+.sidebar-navigation .svg-icon {
+    width: 1em;
+    height: auto;
+    vertical-align: middle;
+    fill: #c6a286 !important;
+}
+
+a {
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    display: inline-block; /* Ensures the underline spans only the text width */
+    overflow: hidden; /* Hides overflow to prevent initial full width */
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Start from the middle initially */
+    width: 0;
+    height: 2px;
+    background-color: #c6a286;
+    transition: width 0.3s ease-out, left 0.3s ease-out; /* Transition width and left properties */
+    transform: translateX(-50%); /* Center the underline */
+}
+
+a:hover::before {
+    width: 200%; /* Expand width to cover both directions */
+}
+
+
+
+
+a:hover::before {
+    width: 100%;
+}
+
+.roboto-slab {
+    font-family: "Roboto Slab", serif;
+    color: #4c2f1e;
+}
+
+.image-box p, b {
+    margin: 20px;
+}
+
+.larger {
+    font-size: 1.2em;
+}
+
+input[type="text"] {
+    color: #4c2f1e;
+    background-color: #c6a286;
+    font-size: large;
+    padding: 20px 30px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid #4c2f1e; /* Changed to shorthand property */
+    transition: all 0.1s ease-in-out; /* Changed to 0.3s for smoother transition */
+}
+
+input[type="text"]::placeholder {
+    color: #4c2f1e;
+}
+
+input[type="text"]:focus {
+    transform: scale(0.98); /* Changed 'scale' to 'transform' */
+}
+
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    background-color: #c6a286;
+}
+
+select {
+    background-color: #c6a286;
+    color: #4c2f1e;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.1s ease-in;
+    border: 2px solid #4c2f1e;
+}
+
+select:hover {
+    scale: 95%;
+}
+
+select:active {
+    scale: 93%;
+}

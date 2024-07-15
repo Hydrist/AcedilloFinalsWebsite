@@ -1,0 +1,73 @@
+.content {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.delivery-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.delivery-section img {
+    width: 30%;
+    height: auto;
+}
+
+.delivery-text {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.delivery-text h2 {
+    color: #4c2f1e;
+}
+
+.order-info {
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  height: 95%;
+  text-align: center;
+  background-color: #d8cece;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c6a286; 
+    transition: width 0.3s;
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+.roboto-slab {
+    font-family: "Roboto Slab", serif;
+    color: #4c2f1e;
+}
+
+.image-box p, b {
+    margin: 20px;
+}
+
+.delivery-options {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 30px;
+    margin-inline: 30px;
+}

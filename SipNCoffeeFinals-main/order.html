@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/order.css">
+    <title>Sip & Coffee</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-navigation">
+            <a href="index.html">
+                <img class="svg-icon" src="svg/coffee-svgrepo-com.svg" alt="">
+                  &nbsp;Home
+            </a>
+            <a href="delivery.html">
+                <img class="svg-icon" src="svg/motorcycle-svgrepo-com.svg" alt="">
+                  &nbsp;Delivery
+            </a>
+            <a href="menu.html">
+                <img class="svg-icon" src="svg/hamburger.svg" alt="">
+                &nbsp;Menu</a>
+
+            <a href="promotions.html">
+                <img class="svg-icon" src="svg/megaphone-svgrepo-com.svg" alt="">
+                &nbsp;Promotions
+            </a>
+        </div>  
+    </div>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">
+                <img src="homeimages/logo.png" alt="Logo">
+            </div>
+            <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="delivery.html">Delivery</a>
+                <a href="menu.html">Menu</a>
+                <a href="promotions.html">Promotions</a> &nbsp;
+                <button onclick="location.href='order.html';">Order Now</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <b class="roboto-slab" style="font-size: xx-large; flex: none;">Enter your information so we can complete you order:</b>
+            
+            <div style="display: flex; flex-direction: row; gap: 50px;">
+                <div style="display: flex; flex-direction: column;">
+                    <input type="text" placeholder="Address">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Contact No.">
+                    <input type="text" placeholder="Email">
+    
+                    <hr>
+
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <input type="checkbox"><span>Would you like to sign up to our newsletter?</span>
+                    </div>
+                    <hr>
+                    <button onclick="location.href='#order-complete';">Done</button>
+                </div>
+    
+                <div style="display: flex; align-items: center; flex-direction: column; gap: 10px; justify-content: space-between;">
+                    <div id="select" style="display: flex; flex-direction: column; gap: 10px;">
+                        <select>
+                              <option value="">Select your order</option>
+                              <option value="csramel-machiato">Caramel Macchiato - ₱60</option>
+                              <option value="cappuccino">Classic Cappuccino -  ₱55</option>
+                              <option value="vanilla-latte">Spiked Vanilla Latte -  ₱45</option>
+                              <option value="mocha">Iced Mocha -  ₱65</option>
+                              <option value="matcha">Matcha Latte -  ₱80</option>
+                              <option value="flat-white">Flat White -  ₱70</option>
+                              <option value="affogato">Affogato -  ₱65</option>
+                              <option value="iced-americano">Iced Americano -  ₱50</option>
+                              <option value="blueberry-cheesecake">Blueberry Cheesecake -  ₱100</option>
+                              <option value="moist-choco">Moist Chocolate Cake -  ₱110</option>
+                              <option value="crossaints">Freshly Baked Croissants -  ₱90</option>
+                              <option value="cinammon-rolls">Cinnamon Rolls -  ₱80</option>
+                          </select>
+                    </div>
+          
+                      <br>
+                      
+                      <div style="display: flex; flex-direction: row; gap: 10px;">
+                          <button onclick="addSelect()">Add another</button>
+                          <button onclick="removeSelect()">Remove order</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="order-complete">
+            <img src="svg/checkbox-circle-svgrepo-com.svg" alt="Checkmark Image" style="height: 200px; width: 200px;">
+            <p>Your order has been requested, we will send an email regarding your order's status.</p>
+            <button onclick="location.href='#';">Okay</button>
+        </div>
+
+        <div class="intro-text-area"><br><br>
+            <center><b class="roboto-slab larger">OUR STORY</b></center>
+            <p>
+                &nbsp;&nbsp;&nbsp;Sip & Coffee, a charming coffeehouse celebrated for its artisanal blends and inviting atmosphere, began its journey in the vibrant city of Cebu, Philippines, in 2012. The founders, a passionate husband-and-wife duo, were inspired by their travels across the Philippines' coffee-growing regions, where they discovered the rich, diverse flavors of beans cultivated in the highlands of Benguet and the volcanic soils of Batangas. They meticulously source their beans from small, sustainable farms, ensuring every cup supports fair trade practices and environmentally friendly farming methods. With a focus on quality and community, Sip & Coffee has grown from a local favorite to a beloved brand, known for its commitment to crafting the perfect brew and creating a welcoming space for coffee lovers to gather and savor each sip.
+            </p><br><br><br>
+        </div>
+        <div class="footer">
+            <br>
+            <img width="100" height="100" src="homeimages/logo.png" alt="Logo">
+            <p><b>Christabelle Jaynee S.C. Acedillo</b><br><i>belleacedillo@gmail.com</i></p>
+        </div>
+    </div>
+</div>
+<script>
+    let selectNum = 1;
+    const selectLimit = 4;
+
+    function addSelect() {
+
+        if (selectNum <= selectLimit) {
+            const select = document.querySelector('select');
+            const options = select.querySelectorAll('option');
+            
+            const newSelect = document.createElement('select');
+
+            newSelect.id = `${selectNum}`
+            
+            options.forEach(option => {
+                const newOption = document.createElement('option');
+                newOption.text = option.text;
+                newOption.value = option.value;
+                newSelect.appendChild(newOption);
+            });
+            
+            document.querySelector('#select').appendChild(newSelect);
+            selectNum++
+        } else {
+            const maxSelectInfo = document.createElement('p')
+            maxSelectInfo.text = "Maximum orders exceeded."
+            document.querySelector('#select').appendChild()
+        }
+    }
+
+    function removeSelect() {
+        if (selectNum != 0) {
+            const select = document.getElementById(`${selectNum-1}`)
+            selectNum--
+            select.remove();
+        }
+    }
+</script>
+
+</body>
+</html>     

@@ -1,0 +1,29 @@
+.promotions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.promo-image-box {
+    flex: 0 1 calc(40% - 10px);
+    width: 325px;
+    margin: 20px;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.promo-image-box img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.egift {
+    
+}
